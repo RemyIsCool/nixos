@@ -134,6 +134,9 @@
         };
     };
 
+	virtualisation.virtualbox.host.enable = true;
+	users.extraGroups.vboxusers.members = [ "remy" ];
+
     # Make non-NixOS executables work
     programs.nix-ld.enable = true;
     programs.nix-ld.libraries = with pkgs; [
