@@ -29,7 +29,7 @@
 		vlc
 		grim
 		wl-clipboard
-		teams
+		teams-for-linux
 
 		# Scripts
 		(writeShellScriptBin "nixos-config" ''
