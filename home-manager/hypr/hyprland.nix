@@ -87,6 +87,9 @@
 				"SUPER SHIFT, 9, movetoworkspace, 9"
 				"SUPER SHIFT, 0, movetoworkspace, 10"
 
+				"SUPER, return, fullscreen, 1"
+				"SUPER SHIFT, return, fullscreen, 0"
+
 				", XF86MonBrightnessUp, exec, brightnessctl set +5%"
 				", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
 
