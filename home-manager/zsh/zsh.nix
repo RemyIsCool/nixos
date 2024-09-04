@@ -11,6 +11,7 @@
 			"..." = "cd ../..";
 			"...." = "cd ../../..";
 			vigodot = "nvim --listen 127.0.0.1:55432 .";
+			garbage = "sudo nix-collect-garbage -d;nix-collect-garbage -d;sudo nixos-rebuild switch --flake ~/nixos;nix run home-manager -- --flake ~/nixos switch";
 		};
 		
 		defaultKeymap = "viins";
