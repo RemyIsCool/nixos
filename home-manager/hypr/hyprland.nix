@@ -114,6 +114,7 @@
 			windowrule = [
 				"workspace 1, ^firefox$"
 				"workspace 2, ^Alacritty$"
+				"workspace 3, ^Godot$"
 			];
 
 			windowrulev2 = [ "suppressevent maximize, class:.*" ];
