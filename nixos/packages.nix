@@ -32,7 +32,7 @@
 		teams-for-linux
 
 		# Scripts
-		(writeShellScriptBin "nixos-config" ''
+		(writeShellScriptBin "config" ''
 			sudo -v
 			previous_dir=$(pwd)
 			cd ~/nixos
@@ -41,6 +41,17 @@
 			git add .
 			read -p "Commit message: " message
 			git commit -m "$message"
+			git push
+			sudo nixos-rebuild switch --flake .
+			nix run home-manager -- --flake . switch
+			cd $previous_dir
+		'')
+
+		(writeShellScriptBin "update" ''
+			previous_dir=$(pwd)
+			cd ~/nixos
+			git pull
+			nix flake update
 			git push
 			sudo nixos-rebuild switch --flake .
 			nix run home-manager -- --flake . switch
