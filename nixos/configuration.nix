@@ -104,6 +104,8 @@
     
 	services.tumbler.enable = true;
 
+	services.gvfs.enable = true;
+
 	services.upower.enable = true;
 
 	# Fingerprint
