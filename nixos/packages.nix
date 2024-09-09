@@ -30,6 +30,7 @@
 		grim
 		wl-clipboard
 		teams-for-linux
+		libreoffice
 
 		# Scripts
 		(writeShellScriptBin "config" ''
