@@ -16,7 +16,6 @@
 		alacritty
 		wofi
 		brightnessctl
-		starship
 		zoxide
 		fzf
 		eza
@@ -66,6 +65,11 @@
     programs.hyprland.enable = true;
 	programs.file-roller.enable = true;
 	programs.steam.enable = true;
+	
+	programs.starship = {
+		enable = true;
+		presets = [ "nerd-font-symbols" ];
+	};
 
 	# Add fonts
 	fonts.packages = with pkgs; [
