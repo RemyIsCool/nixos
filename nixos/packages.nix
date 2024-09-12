@@ -17,6 +17,7 @@
 		wofi
 		brightnessctl
 		zoxide
+		starship
 		fzf
 		eza
 		fastfetch
@@ -65,11 +66,6 @@
     programs.hyprland.enable = true;
 	programs.file-roller.enable = true;
 	programs.steam.enable = true;
-	
-	programs.starship = {
-		enable = true;
-		presets = [ "nerd-font-symbols" ];
-	};
 
 	# Add fonts
 	fonts.packages = with pkgs; [
