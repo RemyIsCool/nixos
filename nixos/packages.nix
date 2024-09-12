@@ -53,6 +53,8 @@
 			cd ~/nixos
 			git pull
 			nix flake update
+			git add .
+			git commit -m "System update"
 			git push
 			sudo nixos-rebuild switch --flake .
 			nix run home-manager -- --flake . switch
