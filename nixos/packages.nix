@@ -74,6 +74,6 @@
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
 		inter
 		jetbrains-mono
-		liberation-ttf
+		liberation_ttf
 	];
 }
