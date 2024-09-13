@@ -31,6 +31,7 @@
 		wl-clipboard
 		teams-for-linux
 		libreoffice
+		onedrive
 
 		# Scripts
 		(writeShellScriptBin "config" ''
