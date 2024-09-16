@@ -31,6 +31,7 @@
 		wl-clipboard
 		teams-for-linux
 		libreoffice
+		wofi-emoji
 
 		# Scripts
 		(writeShellScriptBin "config" ''

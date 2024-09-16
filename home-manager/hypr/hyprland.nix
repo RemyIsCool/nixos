@@ -54,6 +54,7 @@
 				"SUPER, R, exec, wofi --show drun --prompt 'Search Programs'"
 				"SUPER, P, pseudo,"
 				"SUPER, S, togglesplit,"
+				"SUPER, A, exec, wofi-emoji"
 
 				"SUPER, H, movefocus, l"
 				"SUPER, L, movefocus, r"
