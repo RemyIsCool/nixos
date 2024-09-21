@@ -22,6 +22,7 @@ require("oil").setup({
 		["g."] = "actions.toggle_hidden",
 		["g\\"] = "actions.toggle_trash",
 	},
+	use_default_keymaps = false,
 })
 
 vim.keymap.set("n", "-", require("oil").open_float, { desc = "Open parent directory" })
