@@ -13,11 +13,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 
-for _, direction in ipairs({"h", "j", "k", "l"}) do
-	vim.keymap.set("n", "<C-" .. direction .. ">", "<C-w>" .. direction)
-end
-
 vim.api.nvim_set_keymap('n', 'j', 'v:count ? "j" : "gj"', { noremap = true, expr = true })
 vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr = true })
 
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>")
+
+vim.keymap.set("n", "<leader>lu", "<Cmd>Lazy update<CR>")
