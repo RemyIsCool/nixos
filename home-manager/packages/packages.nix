@@ -21,6 +21,7 @@
 		inter
 		jetbrains-mono
 		liberation_ttf
+		openmoji-color
 
 		# Scripts
 		(writeShellScriptBin "config" ''
@@ -30,12 +31,10 @@
 
 			    for arg in "$@"; do
 			   	 if [[ "$arg" == "$match_string" ]]; then
-			   		 echo "Match found: $arg"
 			   		 return 0
 			   	 fi
 			    done
 
-			    echo "No match found."
 			    return 1
 			}
 
