@@ -51,7 +51,9 @@
 
 	fonts.packages = with pkgs; [
 		liberation_ttf
-		openmoji-color
+		noto-fonts
+		noto-fonts-extra
+		noto-fonts-color-emoji
 	];
 
 	programs.thunar.enable = true;
