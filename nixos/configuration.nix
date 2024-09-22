@@ -49,6 +49,11 @@
 		nodejs
     ];
 
+	fonts.packages = with pkgs; [
+		liberation_ttf
+		openmoji-color
+	];
+
 	programs.thunar.enable = true;
 	programs.file-roller.enable = true;
 	programs.steam.enable = true;

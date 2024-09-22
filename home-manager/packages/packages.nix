@@ -20,8 +20,6 @@
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
 		inter
 		jetbrains-mono
-		liberation_ttf
-		openmoji-color
 
 		# Scripts
 		(writeShellScriptBin "config" ''
