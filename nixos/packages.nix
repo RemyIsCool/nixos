@@ -69,6 +69,7 @@
     programs.hyprland.enable = true;
 	programs.file-roller.enable = true;
 	programs.steam.enable = true;
+	programs.tmux.enable = true;
 
 	# Add fonts
 	fonts.packages = with pkgs; [
