@@ -15,6 +15,7 @@
 		teams-for-linux
 		libreoffice
 		wofi-emoji
+		dconf
 
 		# Fonts
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})

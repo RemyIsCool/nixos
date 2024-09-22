@@ -14,7 +14,6 @@
 
 		# You can also split up your configuration and import pieces of it here:
 		# ./nvim.nix
-		./packages/packages.nix
 		./neovim/neovim.nix
 		./hypr/hyprland.nix
 		./hypr/hyprpaper.nix
@@ -28,6 +27,7 @@
 		./btop/btop.nix
 		./wofi/wofi.nix
 		./tmux/tmux.nix
+		./packages/packages.nix
 	];
 
 	nixpkgs = {
