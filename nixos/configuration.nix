@@ -53,7 +53,7 @@
 		liberation_ttf
 		noto-fonts
 		noto-fonts-extra
-		noto-fonts-color-emoji
+		noto-fonts-emoji
 	];
 
 	programs.thunar.enable = true;
