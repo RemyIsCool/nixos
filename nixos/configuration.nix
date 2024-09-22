@@ -56,6 +56,7 @@
 		noto-fonts-cjk-serif
 		noto-fonts-extra
 		noto-fonts-emoji
+		babelstone-han
 	];
 
 	programs.thunar.enable = true;
