@@ -26,6 +26,7 @@
 		./ags/ags.nix
 		./btop/btop.nix
 		./wofi/wofi.nix
+		./tmux/tmux.nix
 	];
 
 	nixpkgs = {
