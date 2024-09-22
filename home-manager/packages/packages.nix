@@ -16,6 +16,7 @@
 		libreoffice
 		wofi-emoji
 		dconf
+		pnpm
 
 		# Fonts
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
