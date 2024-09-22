@@ -1,11 +1,7 @@
 { inputs, pkgs, ... }:
 {
-    environment.systemPackages = with pkgs; [
-        neovim
-		gcc
-		cargo
-		python3
-		nodejs
+	home.packages = with pkgs; [
+		# Programs
 		brightnessctl
 		eza
 		fastfetch
@@ -19,6 +15,12 @@
 		teams-for-linux
 		libreoffice
 		wofi-emoji
+
+		# Fonts
+		(nerdfonts.override {fonts = ["JetBrainsMono"];})
+		inter
+		jetbrains-mono
+		liberation_ttf
 
 		# Scripts
 		(writeShellScriptBin "config" ''
@@ -73,19 +75,5 @@
 			nix run home-manager -- --flake . switch
 			cd $previous_dir
 		'')
-    ];
-
-	programs.thunar.enable = true;
-	programs.file-roller.enable = true;
-	programs.steam.enable = true;
-	programs.tmux.enable = true;
-	programs.zsh.enable = true;
-
-	# Add fonts
-	fonts.packages = with pkgs; [
-		(nerdfonts.override {fonts = ["JetBrainsMono"];})
-		inter
-		jetbrains-mono
-		liberation_ttf
 	];
 }

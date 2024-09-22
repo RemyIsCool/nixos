@@ -18,8 +18,6 @@
 
         # Import your generated (nixos-generate-config) hardware configuration
         ./hardware-configuration.nix
-
-		./packages.nix
     ];
 
     nixpkgs = {
@@ -41,6 +39,20 @@
             allowUnfree = true;
         };
     };
+
+	# Packages and programs
+    environment.systemPackages = with pkgs; [
+        neovim
+		gcc
+		cargo
+		python3
+		nodejs
+    ];
+
+	programs.thunar.enable = true;
+	programs.file-roller.enable = true;
+	programs.steam.enable = true;
+	programs.zsh.enable = true;
 
     nix = let
         flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
