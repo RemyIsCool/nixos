@@ -24,6 +24,6 @@
 		jetbrains-mono
 
 		# Scripts
-		(writeShellScriptBin "config" ./config.sh)
+		(writeShellScriptBin "config" (builtins.readFile ./config.sh))
 	];
 }
