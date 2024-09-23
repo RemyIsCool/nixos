@@ -32,7 +32,7 @@ else
 		sudo nix-collect-garbage -d
 		nix-collect-garbage -d
 		sudo nixos-rebuild switch --flake .
-		nix run home-manager -- --flake . switch
+		home-manager --flake . switch
 	else
 		if check_match "--update" "$@"; then
 			git pull
@@ -41,7 +41,7 @@ else
 			git commit -m "System update"
 			git push
 			sudo nixos-rebuild switch --flake .
-			nix run home-manager -- --flake . switch
+			home-manager --flake . switch
 		else
 			git pull
 
@@ -62,7 +62,7 @@ else
 			fi
 
 			if ! check_match "--system" "$@"; then
-				nix run home-manager -- --flake . switch
+				home-manager --flake . switch
 			fi
 		fi
 	fi
