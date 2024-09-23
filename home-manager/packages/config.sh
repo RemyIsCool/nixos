@@ -23,6 +23,13 @@ if check_match "--help" "$@"; then
 	echo "  --system      Only rebuild the system configuration, not the home-manager configuration."
 	echo "  --garbage     Removes any garbage left over from older generations of the system."
 	echo '  --update      Updates the flake lock file and pushes it to Github with a commit message of "System update".'
+	echo
+	echo "Examples:"
+	echo "Configure the system without pushing any changes and only rebuilding the home-manager configuration."
+	echo '  $ config --test --home'
+	echo
+	echo "Commit and push any changes to the configuration and rebuild only the system configuration."
+	echo '  $ config --no-editor --system'
 else
 	sudo -v
 	previous_dir=$(pwd)
