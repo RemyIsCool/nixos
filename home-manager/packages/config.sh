@@ -16,13 +16,13 @@ if check_match "--help" "$@"; then
 	echo "Configure and rebuild the system."
 	echo
 	echo "Options:"
-	echo "--help        Show this message."
-	echo "--no-editor   Commit any changes, push them, and rebuild the system, but don't open up the editor."
-	echo "--test        Download any changes to the configuration, add any changes, and rebuild the system, but don't commit or push any changes."
-	echo "--home        Only rebuild the home-manager configuration, not the system-wide configuration."
-	echo "--system      Only rebuild the system configuration, not the home-manager configuration."
-	echo "--garbage     Removes any garbage left over from older generations of the system."
-	echo '--update      Updates the flake lock file and pushes it to Github with a commit message of "System update".'
+	echo "  --help        Show this message."
+	echo "  --no-editor   Commit any changes, push them, and rebuild the system, but don't open up the editor."
+	echo "  --test        Download any changes to the configuration, add any changes, and rebuild the system, but don't commit or push any changes."
+	echo "  --home        Only rebuild the home-manager configuration, not the system-wide configuration."
+	echo "  --system      Only rebuild the system configuration, not the home-manager configuration."
+	echo "  --garbage     Removes any garbage left over from older generations of the system."
+	echo '  --update      Updates the flake lock file and pushes it to Github with a commit message of "System update".'
 else
 	sudo -v
 	previous_dir=$(pwd)
