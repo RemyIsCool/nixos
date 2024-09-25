@@ -19,3 +19,6 @@ vim.api.nvim_set_keymap('n', 'k', 'v:count ? "k" : "gk"', { noremap = true, expr
 vim.keymap.set("n", "<C-c>", "<Cmd>noh<CR>")
 
 vim.keymap.set("n", "<leader>lu", "<Cmd>Lazy update<CR>")
+
+vim.keymap.set("n", "<leader>n", "<Cmd>bn<CR>")
+vim.keymap.set("n", "<leader>p", "<Cmd>bp<CR>")

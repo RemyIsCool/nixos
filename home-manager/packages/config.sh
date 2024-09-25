@@ -35,43 +35,43 @@ else
 	previous_dir=$(pwd)
 	cd ~/nixos
 
-	git pull
-
-	if ! check_match "--no-editor" "$@"; then
-		nvim .
-	fi
-
-	git add .
-
-	if ! check_match "--test" "$@"; then
-		read -p "Commit message: " message
-		git commit -m "$message"
-		git push
-	fi
-
-	if ! check_match "--home" "$@"; then
-		sudo nixos-rebuild switch --flake .
-	fi
-
-	if ! check_match "--system" "$@"; then
-		home-manager --flake . switch
-	fi
-
-	if check_match "--update" "$@"; then
-		git pull
-		nix flake update
-		git add .
-		git commit -m "System update"
-		git push
-		sudo nixos-rebuild switch --flake .
-		home-manager --flake . switch
-	fi
-
 	if check_match "--garbage" "$@"; then
 		sudo nix-collect-garbage -d
 		nix-collect-garbage -d
 		sudo nixos-rebuild switch --flake .
 		home-manager --flake . switch
+	else
+		if check_match "--update" "$@"; then
+			git pull
+			nix flake update
+			git add .
+			git commit -m "System update"
+			git push
+			sudo nixos-rebuild switch --flake .
+			home-manager --flake . switch
+		else
+			git pull
+
+			if ! check_match "--no-editor" "$@"; then
+				nvim .
+			fi
+
+			git add .
+
+			if ! check_match "--test" "$@"; then
+				read -p "Commit message: " message
+				git commit -m "$message"
+				git push
+			fi
+
+			if ! check_match "--home" "$@"; then
+				sudo nixos-rebuild switch --flake .
+			fi
+
+			if ! check_match "--system" "$@"; then
+				home-manager --flake . switch
+			fi
+		fi
 	fi
 
 	cd $previous_dir
