@@ -6,6 +6,7 @@
 		syntaxHighlighting.enable = true;
 		shellAliases = {
 			ls = "eza -a --icons=always --color=always";
+			tree = "eza -a --icons=always --color=always --tree";
 			ll = "eza -la --icons=always --color=always";
 			".." = "cd ..";
 			"..." = "cd ../..";
