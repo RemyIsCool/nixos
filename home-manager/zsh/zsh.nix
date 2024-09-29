@@ -12,6 +12,9 @@
 			"..." = "cd ../..";
 			"...." = "cd ../../..";
 			vigodot = "nvim --listen 127.0.0.1:55432 .";
+			v = "nvim";
+			vi = "nvim";
+			vim = "nvim";
 		};
 		
 		defaultKeymap = "viins";
