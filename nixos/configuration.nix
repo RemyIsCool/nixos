@@ -64,6 +64,10 @@
 	programs.steam.enable = true;
 	programs.zsh.enable = true;
 
+	hardware.bluetooth.enable = true;
+  	hardware.bluetooth.powerOnBoot = true;
+	services.blueman.enable = true;
+
     nix = let
         flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
     in {
