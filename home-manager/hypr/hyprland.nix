@@ -3,7 +3,10 @@
 	wayland.windowManager.hyprland = {
 		enable = true;
 		settings = {
-			monitor = ", preferred, auto, 1";
+			monitor = [
+				", preferred, auto, 1"
+				"DP-1, preferred, -1920x0, 1"
+			];
 
 			exec-once = [
 				"hyprpaper"
