@@ -120,6 +120,10 @@
 				"workspace 2, ^Alacritty$"
 				"workspace 3, ^org.godotengine."
 			];
+			bindl = [
+				'', switch:on:[switch name], exec, hyprctl keyword monitor "eDP-1, disable"''
+				'', switch:off:[switch name], exec, hyprctl keyword monitor "eDP-1, 1920x1200, 0x0, 1"''
+			];
 
 			windowrulev2 = [ "suppressevent maximize, class:.*" ];
 		};
