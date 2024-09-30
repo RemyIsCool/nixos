@@ -17,6 +17,7 @@
 		wofi-emoji
 		dconf
 		pnpm
+		inkscape
 
 		# Fonts
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
