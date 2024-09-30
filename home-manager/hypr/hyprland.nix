@@ -99,6 +99,8 @@
 				", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
 
 				", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
+				"SUPER SHIFT, B, exec, ags --quit; ags"
 			];
 
 			bindm = [
