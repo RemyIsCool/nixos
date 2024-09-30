@@ -18,6 +18,7 @@
 		dconf
 		pnpm
 		inkscape
+		gimp
 
 		# Fonts
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
