@@ -47,6 +47,7 @@
 		cargo
 		python3
 		nodejs
+		unzip
     ];
 
 	fonts.packages = with pkgs; [

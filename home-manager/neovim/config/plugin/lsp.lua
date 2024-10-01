@@ -5,7 +5,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "isort", "black" },
 		rust = { "rustfmt", lsp_format = "fallback" },
-		["_"] = { "prettier", "trim_whitespace", stop_after_first = true },
+		javascript = { "prettier" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
