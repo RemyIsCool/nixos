@@ -42,7 +42,7 @@
 
 	# Packages and programs
     environment.systemPackages = with pkgs; [
-        neovim
+		inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.neovim
 		gcc
 		cargo
 		python3
