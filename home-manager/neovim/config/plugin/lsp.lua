@@ -1,4 +1,4 @@
-local lsp_zero = require('lsp-zero')
+local lsp_zero = require("lsp-zero")
 
 require("conform").setup({
 	formatters_by_ft = {
@@ -17,26 +17,26 @@ lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
+require("mason").setup({})
+require("mason-lspconfig").setup({
 	ensure_installed = {},
 	handlers = {
 		function(server_name)
 			if server_name == "tsserver" then
 				server_name = "ts_ls"
 			end
-			require('lspconfig')[server_name].setup({})
+			require("lspconfig")[server_name].setup({})
 		end,
 	},
 })
 
-require('lspconfig').gdscript.setup({})
+require("lspconfig").gdscript.setup({})
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 
 cmp.setup({
-	preselect = 'item',
+	preselect = "item",
 	completion = {
-		completeopt = 'menu,menuone,noinsert'
+		completeopt = "menu,menuone,noinsert",
 	},
 })
