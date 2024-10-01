@@ -1,15 +1,16 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.format_on_save({
-	format_opts = {
-		async = false,
-		timeout_ms = 10000,
+require("conform").setup({
+	formatters_by_ft = {
+		lua = { "stylua" },
+		python = { "isort", "black" },
+		rust = { "rustfmt", lsp_format = "fallback" },
+		["_"] = { "prettier", "trim_whitespace", stop_after_first = true },
 	},
-	servers = {
-		['rust_analyzer'] = { 'rust' },
-		['prettier'] = { 'javascript', 'typescript', 'svelte', 'astro', 'css', 'sass', 'scss', 'json' },
-		['lua_ls'] = { 'lua' },
-	}
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_format = "fallback",
+	},
 })
 
 lsp_zero.on_attach(function(_, bufnr)
