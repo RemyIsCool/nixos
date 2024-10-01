@@ -7,7 +7,7 @@ lsp_zero.format_on_save({
 	},
 	servers = {
 		['rust_analyzer'] = { 'rust' },
-		['ts_ls'] = { 'javascript', 'typescript' },
+		['prettier'] = { 'javascript', 'typescript', 'svelte', 'astro', 'css', 'sass', 'scss', 'json' },
 		['lua_ls'] = { 'lua' },
 	}
 })
