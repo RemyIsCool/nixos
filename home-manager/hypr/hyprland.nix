@@ -47,6 +47,12 @@
 				preserve_split = true;
 			};
 
+			input = {
+				touchpad = {
+					natural_scroll = true;
+				};
+			};
+
 			bind = [
 				# TODO: change to use options or something
 				"SUPER, Q, exec, alacritty"
