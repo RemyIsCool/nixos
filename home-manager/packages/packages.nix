@@ -19,6 +19,7 @@
 		pnpm
 		inkscape
 		gimp
+		blender
 
 		# Fonts
 		(nerdfonts.override {fonts = ["JetBrainsMono"];})
