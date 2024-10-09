@@ -151,7 +151,7 @@
 		accent = "mauve";
 	};
 
-    networking.hostName = "remyf-thinkpad";
+    networking.hostName = "remys-thinkpad";
 
     users.users = {
         remy = {
